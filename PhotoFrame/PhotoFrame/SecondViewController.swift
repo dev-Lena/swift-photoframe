@@ -22,6 +22,7 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         self.photoAlbumText.text = "Photo Album"
          self.photoImageView.image = generateRandomUIImage()
+        self.photoImageView.contentMode = .scaleAspectFill
     }
     
     func generateRandomNumber()->Int{

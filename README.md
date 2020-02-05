@@ -102,3 +102,7 @@
 ![image-20200205020148115](/Users/keunnalee/Library/Application Support/typora-user-images/image-20200205020148115.png)
 
 > 이미지의 제목이 01.jpg ~ 22.jpg 연속된 숫자임을 착안해 generateRandomImage() 메소드에서 generateRandomNumber() 메소드를 통해 생성된 랜덤 숫자를 이름으로 하는 UIImage를 반환해  UIImageView의 image 로 삽입하도록 구현.
+
+* 2020.02.05 13:25
+
+  사진 규격 일정하게 하는 부분 추가 
