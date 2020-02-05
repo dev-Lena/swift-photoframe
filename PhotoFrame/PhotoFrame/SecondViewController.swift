@@ -14,12 +14,16 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var photoAlbumText: UILabel!
     
+    @IBOutlet weak var photoFrame: UIImageView!
+    
     @IBAction func nextImageButtonTouched(_ sender: UIButton) {
         self.photoImageView.image = generateRandomUIImage()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.photoFrame.image = UIImage(named: "photoframe-border")
+       
         self.photoAlbumText.text = "Photo Album"
          self.photoImageView.image = generateRandomUIImage()
         self.photoImageView.contentMode = .scaleAspectFill
