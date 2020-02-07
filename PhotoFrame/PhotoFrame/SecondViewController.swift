@@ -15,7 +15,8 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var photoAlbumText: UILabel!
     
     @IBAction func selectButtonTouched(_ sender: Any) {
-        UIImagePickerController()
+        // UIImagePickerController로 사진앱 - 카메라롤에서 사진을 가져오도록 구현한다.
+        // 선택한 사진을 받기 위해 구현해야하는 메서드는 어떤게 있는지 찾아서 구현한다.
     }
     
     @IBAction func nextImageButtonTouched(_ sender: UIButton) {
