@@ -39,5 +39,11 @@ class SecondViewController: UIViewController {
         }
         return images[generateRandomNumber()]
     }
+}
+extension SecondViewController : UIImagePickerControllerDelegate,
     
+UINavigationControllerDelegate{
+    @IBAction func selectButtonTouched(_ sender: Any) {
+        self.imagePickerController.sourceType = .photoLibrary
+    }
 }
