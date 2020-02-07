@@ -6,15 +6,14 @@
 
 * 2020.02.03 21:30 
   ViewController 클래스 viewDidLoad() 함수에서 `print(#file, #line, #function, #column)` 코드를 추가 후 실행 콘솔 영역 출력 확인
-
-![image-20200203212810017](/Users/keunnalee/Library/Application Support/typora-user-images/image-20200203212810017.png)
+* ![](https://i.imgur.com/ByWM4rP.jpg)
 
 ### photoframe-step2 
 
 * 2020.02.03 22:00 
   First Scene에 만들어져 있는 레이블들(firstLabel, firstDescription)을 IBOutlet으로 연결 후 연결한 아웃렛 변수에 값을 변경.
 
-![image-20200203220128744](/Users/keunnalee/Library/Application Support/typora-user-images/image-20200203220128744.png)
+![](https://i.imgur.com/tYIlRs0.jpg)
 
 ### photoframe-step3 
 
@@ -97,7 +96,7 @@
 
   generateRandomImage() 메소드 생성
 
-![image-20200205020148115](/Users/keunnalee/Library/Application Support/typora-user-images/image-20200205020148115.png)
+![](https://i.imgur.com/bRc6Rlk.jpg)
 
 > 이미지의 제목이 01.jpg ~ 22.jpg 연속된 숫자임을 착안해 generateRandomImage() 메소드에서 generateRandomNumber() 메소드를 통해 생성된 랜덤 숫자를 이름으로 하는 UIImage를 반환해  UIImageView의 image 로 삽입하도록 구현.
 
