@@ -13,11 +13,7 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var photoFrame: UIImageView!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var photoAlbumText: UILabel!
-    
-    @IBAction func selectButtonTouched(_ sender: Any) {
-        // UIImagePickerController로 사진앱 - 카메라롤에서 사진을 가져오도록 구현한다.
-        // 선택한 사진을 받기 위해 구현해야하는 메서드는 어떤게 있는지 찾아서 구현한다.
-    }
+    let imagePickerController = UIImagePickerController()
     
     @IBAction func nextImageButtonTouched(_ sender: UIButton) {
         self.photoImageView.image = generateRandomUIImage()
@@ -25,7 +21,7 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        imagePickerController.delegate = self
         self.photoFrame.image = UIImage(named: "photoframe-border")
         self.photoImageView.contentMode = .scaleAspectFill
         self.photoAlbumText.text = "Photo Album"
@@ -43,5 +39,5 @@ class SecondViewController: UIViewController {
         }
         return images[generateRandomNumber()]
     }
+    
 }
-
