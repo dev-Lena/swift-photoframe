@@ -15,10 +15,6 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var photoAlbumText: UILabel!
     let imagePickerController = UIImagePickerController()
     
-    @IBAction func nextImageButtonTouched(_ sender: UIButton) {
-        self.photoImageView.image = generateRandomUIImage()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePickerController.delegate = self
@@ -39,11 +35,17 @@ class SecondViewController: UIViewController {
         }
         return images[generateRandomNumber()]
     }
-}
-extension SecondViewController : UIImagePickerControllerDelegate,
     
-UINavigationControllerDelegate{
     @IBAction func selectButtonTouched(_ sender: Any) {
         self.imagePickerController.sourceType = .photoLibrary
+        self.present(imagePickerController, animated: true, completion: nil)
     }
+    
+    @IBAction func nextImageButtonTouched(_ sender: UIButton) {
+        self.photoImageView.image = generateRandomUIImage()
+    }
+}
+extension SecondViewController : UIImagePickerControllerDelegate,
+
+UINavigationControllerDelegate{
 }
