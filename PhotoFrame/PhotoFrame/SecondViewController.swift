@@ -9,7 +9,6 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-    // MARK: - view
     @IBOutlet weak var photoFrame: UIImageView!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var photoAlbumText: UILabel!
@@ -24,7 +23,6 @@ class SecondViewController: UIViewController {
         self.photoImageView.image = generateRandomUIImage()
     }
     
-    // MARK: - model
     func generateRandomNumber()->Int{
         return Int(arc4random_uniform(21) + 01)
     }
