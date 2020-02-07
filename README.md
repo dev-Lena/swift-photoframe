@@ -6,22 +6,21 @@
 
 * 2020.02.03 21:30 
   ViewController 클래스 viewDidLoad() 함수에서 `print(#file, #line, #function, #column)` 코드를 추가 후 실행 콘솔 영역 출력 확인
-
-![image-20200203212810017](/Users/keunnalee/Library/Application Support/typora-user-images/image-20200203212810017.png)
+* ![](https://i.imgur.com/ByWM4rP.jpg)
 
 ### photoframe-step2 
 
 * 2020.02.03 22:00 
   First Scene에 만들어져 있는 레이블들(firstLabel, firstDescription)을 IBOutlet으로 연결 후 연결한 아웃렛 변수에 값을 변경.
 
-![image-20200203220128744](/Users/keunnalee/Library/Application Support/typora-user-images/image-20200203220128744.png)
+![](https://i.imgur.com/tYIlRs0.jpg)
 
 ### photoframe-step3 
 
 * 2020.02.04 15:12
   First Scene에 버튼을 추가하고 IBAction으로 연결. 
   연결 후 텍스트 색상과 배경색, 투명도를 변화시키는 액션에 대한 메서드 구현.
-  ![Screen Shot 2020-02-04 at 3.03.30 PM](/Users/keunnalee/Desktop/Screen Shot 2020-02-04 at 3.03.30 PM.png)
+  ![](https://i.imgur.com/BmwDnRI.png)
 
 (왼쪽 스냅샷 : `다음` 버튼 누르기 전 , 오른쪽 스냅샷 : `다음` 버튼 누른 후 )
 
@@ -31,7 +30,7 @@
 
   두 개의 Scene 추가. 두번째 화면(Indigo 색상)에서 세번째 화면(Purple)로 넘어갈 때 Segue 추가
 
-![Screen Shot 2020-02-04 at 4.33.04 PM](/Users/keunnalee/Desktop/Screen Shot 2020-02-04 at 4.33.04 PM.png)
+![](https://i.imgur.com/hoDmuMG.png)
 
 (첫번째 스냅샷 : `다음` 버튼 누르기 전 , 두번째 스냅샷 :첫번째 페이지에서 `다음` 버튼 누른 후 Indigo 배경색 화면, 세번째 스냅샷 : 두번째 페이지에서 `다음` 버튼 누른 후 Purple 배경색 화면)
 
@@ -42,12 +41,11 @@
   ViewController 클래스 추가 및 스토리보드 Scene 과 연결.
   `[닫기]` 버튼 생성 및 IBAction 연결해 화면을 닫는 액션 추가.
   UIViewController 주요 콜백 함수(viewWillAppear(), viewDidAppear(), viewWillDisappear(), viewDidDisappear() )에 print(**#file**, **#line**, **#function**, **#column**) 코드를 추가하여 화면 전환이 이뤄지는 사이 ViewController의 라이프사이클 변화 확인. 
-
-![Screen Shot 2020-02-04 at 6.01.08 PM](/Users/keunnalee/Desktop/Screen Shot 2020-02-04 at 6.01.08 PM.png)
-
-![Screen Shot 2020-02-04 at 6.01.59 PM](/Users/keunnalee/Desktop/Screen Shot 2020-02-04 at 6.01.59 PM.png)
-
-(첫번째 스냅샷 - 왼쪽: IndigoViewController 화면 열림, 첫번째 스냅샷 - 오른쪽: IndigoViewController 화면에서 `[닫기]` 버튼을 누른 후 화면 닫힘 / 두번째 스냅샷 - 왼쪽 : PurpleViewController 화면 열림, 두번째 스냅샷 - 오른쪽 : PurpleViewController 화면에서 `[닫기]` 버튼을 누른 후 화면 닫힘 )
+  
+  ![](https://i.imgur.com/kpV1kui.png)
+  ![](https://i.imgur.com/stgYsLt.png)
+  
+  (첫번째 스냅샷 - 왼쪽: IndigoViewController 화면 열림, 첫번째 스냅샷 - 오른쪽: IndigoViewController 화면에서 `[닫기]` 버튼을 누른 후 화면 닫힘 / 두번째 스냅샷 - 왼쪽 : PurpleViewController 화면 열림, 두번째 스냅샷 - 오른쪽 : PurpleViewController 화면에서 `[닫기]` 버튼을 누른 후 화면 닫힘 )
 
 > 화면이 새로 열릴 때 : viewDidLoad() -> viewWillAppear()
 >
@@ -63,9 +61,8 @@
   IndigoViewController 와 PurpleViewController 의 `closeButtonTouched` 코드 수정.
   UIViewController 주요 콜백 함수(viewWillAppear(), viewDidAppear(), viewWillDisappear(), viewDidDisappear() )에 print(**#file**, **#line**, **#function**, **#column**) 코드를 추가하여 화면 전환이 이뤄지는 사이 ViewController의 라이프사이클 변화 확인. 
 
-![Screen Shot 2020-02-04 at 6.26.12 PM](/Users/keunnalee/Desktop/Screen Shot 2020-02-04 at 6.26.12 PM.png)
-
-![Screen Shot 2020-02-04 at 6.27.18 PM](/Users/keunnalee/Desktop/Screen Shot 2020-02-04 at 6.27.18 PM.png)
+![](https://i.imgur.com/pt1yxch.jpg)
+![](https://i.imgur.com/eBxCseg.jpg)
 
 (첫번째 스냅샷 - 왼쪽: IndigoViewController 화면 열림, 첫번째 스냅샷 - 오른쪽: IndigoViewController 화면에서 `[닫기]` 버튼을 누른 후 화면 닫힘 / 두번째 스냅샷 - 왼쪽 : PurpleViewController 화면 열림, 두번째 스냅샷 - 오른쪽 : PurpleViewController 화면에서 `[닫기]` 버튼을 누른 후 화면 닫힘 )
 
@@ -99,7 +96,7 @@
 
   generateRandomImage() 메소드 생성
 
-![image-20200205020148115](/Users/keunnalee/Library/Application Support/typora-user-images/image-20200205020148115.png)
+![](https://i.imgur.com/bRc6Rlk.jpg)
 
 > 이미지의 제목이 01.jpg ~ 22.jpg 연속된 숫자임을 착안해 generateRandomImage() 메소드에서 generateRandomNumber() 메소드를 통해 생성된 랜덤 숫자를 이름으로 하는 UIImage를 반환해  UIImageView의 image 로 삽입하도록 구현.
 
