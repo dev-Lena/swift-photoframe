@@ -10,13 +10,10 @@ import UIKit
 
 class IndigoViewController: UIViewController {
     
-    
+    // MARK: - view
     @IBOutlet weak var closeButton: UIButton!
     
-    @IBAction func closeButtonTouched(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
+    // MARK: - controller
     override func viewWillAppear(_ animated: Bool) {
          print("IndigoViewController - viewWillAppear: ")
            print(#file, #line, #function, #column)
@@ -38,5 +35,9 @@ class IndigoViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
          print("IndigoViewController - viewDidDisappear: ")
         print(#file, #line, #function, #column)
+    }
+    
+    @IBAction func closeButtonTouched(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
 }

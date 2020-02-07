@@ -107,11 +107,11 @@
 			children = (
 				6AC2788023E7BC360045EC75 /* AppDelegate.swift */,
 				6AC2788223E7BC360045EC75 /* SceneDelegate.swift */,
-				6AC2788423E7BC360045EC75 /* FirstViewController.swift */,
 				6AC2788623E7BC360045EC75 /* SecondViewController.swift */,
 				6AC2788823E7BC360045EC75 /* Main.storyboard */,
 				6AC2788B23E7BC370045EC75 /* Assets.xcassets */,
 				6AC2788D23E7BC370045EC75 /* LaunchScreen.storyboard */,
+				6AC2788423E7BC360045EC75 /* FirstViewController.swift */,
 				6AC2789023E7BC370045EC75 /* Info.plist */,
 				6A45760723E94F060005FCD2 /* IndigoViewController.swift */,
 				6A45760923E954780005FCD2 /* PurpleViewController.swift */,
