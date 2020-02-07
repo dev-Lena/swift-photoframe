@@ -1,21 +1,19 @@
 # 사진액자 앱
 
-
-
-### photoframe-step1
+## photoframe-step1
 
 * 2020.02.03 21:30 
   ViewController 클래스 viewDidLoad() 함수에서 `print(#file, #line, #function, #column)` 코드를 추가 후 실행 콘솔 영역 출력 확인
 * ![](https://i.imgur.com/ByWM4rP.jpg)
 
-### photoframe-step2 
+## photoframe-step2 
 
 * 2020.02.03 22:00 
   First Scene에 만들어져 있는 레이블들(firstLabel, firstDescription)을 IBOutlet으로 연결 후 연결한 아웃렛 변수에 값을 변경.
 
 ![](https://i.imgur.com/tYIlRs0.jpg)
 
-### photoframe-step3 
+## photoframe-step3 
 
 * 2020.02.04 15:12
   First Scene에 버튼을 추가하고 IBAction으로 연결. 
@@ -24,7 +22,7 @@
 
 (왼쪽 스냅샷 : `다음` 버튼 누르기 전 , 오른쪽 스냅샷 : `다음` 버튼 누른 후 )
 
-### photoframe-step4
+## photoframe-step4
 
 * 2020.02.04 16:40
 
@@ -34,7 +32,7 @@
 
 (첫번째 스냅샷 : `다음` 버튼 누르기 전 , 두번째 스냅샷 :첫번째 페이지에서 `다음` 버튼 누른 후 Indigo 배경색 화면, 세번째 스냅샷 : 두번째 페이지에서 `다음` 버튼 누른 후 Purple 배경색 화면)
 
-### Photoframe-step5
+## Photoframe-step5
 
 * 2020.02.04 17:56
 
@@ -53,7 +51,7 @@
 >
 > 화면은 스택으로 쌓이며 가장 나중에 열린 화면이 닫히고 그 전 화면이 나올 때, 다시  viewDidLoad() -> viewWillAppear() 를 거치지 않고 바로 화면이 보임.
 
-### Photoframe-step6
+## Photoframe-step6
 
 * 2020.02.04 18:42
 
@@ -76,9 +74,7 @@
 >
 > 화면이 사라지고 다시 보여질 때 이전에 한 번 로드한 화면이라면 다시 돌아올 때 viewDidLoad()와  viewWillAppear()가 호출되지 않았는데, NavigationController 추가 후 사이클이 변경됨.
 
-
-
-### Photoframe-step7
+## Photoframe-step7
 
 * 2020.02.05 01:40
 
@@ -111,7 +107,7 @@
 
   ![image-20200205132139699](/Users/keunnalee/Library/Application Support/typora-user-images/image-20200205132139699.png)
 
-### Photoframe-step7-plus
+## Photoframe-step7-plus
 
 * 2020.02.05 17:10 
 
@@ -120,7 +116,7 @@
 
   ![image-20200205172541031](/Users/keunnalee/Library/Application Support/typora-user-images/image-20200205172541031.png)
 
-### Photoframe-step7-plus
+## Photoframe-step7-plus
 
 * 2020.02.07 18:20
 
@@ -141,7 +137,7 @@
 
 
 
-### 사진 라이브러리에서 사진 가지고 올 때 필요한 코드
+### 사진 라이브러리에서 사진 가지고 올 때 필요한 작업
 
 1. viewController 인스턴스 생성
 2. Delegate 지정

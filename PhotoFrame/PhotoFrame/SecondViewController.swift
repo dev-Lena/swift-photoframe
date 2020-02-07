@@ -45,6 +45,7 @@ class SecondViewController: UIViewController {
         self.photoImageView.image = generateRandomUIImage()
     }
 }
+
 extension SecondViewController : UIImagePickerControllerDelegate,
 
 UINavigationControllerDelegate{
