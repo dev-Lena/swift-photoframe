@@ -122,3 +122,82 @@
   UIImageView에 액자 이미지 추가
 
   ![image-20200205172541031](/Users/keunnalee/Library/Application Support/typora-user-images/image-20200205172541031.png)
+
+### Photoframe-step7-plus
+
+* 2020.02.07 18:20
+
+### 갤러리에서 사진 가져오기
+
+### 과정
+
+1. 선택 버튼 생성
+2. permission 작업 : indo.plist에서 앨범 접근 권한 추가
+3. ViewController 인스턴스 생성
+4. extention으로 SecondViewController의 Delegate 채택 ( UIImagePickerControllerDelegate, UINavigationControllerDelegate)
+5. UIImagePickerController의 소스타입을 사진 라이브러리로 지정.
+6. '다음' 버튼을 누르면 디바이스의 사진 라이브러리(갤러리)가 present 되는 코드 추가
+7. extension한 곳에 imagePickerController() 메소드 구현. 
+8. 사진 라이브러리(갤러리)에서 사진을 선택하고 선택 화면이 dismiss 되는 코드 추가
+
+![](https://i.imgur.com/G51auMi.jpg)
+
+
+
+### 사진 라이브러리에서 사진 가지고 올 때 필요한 코드
+
+1. viewController 인스턴스 생성
+2. Delegate 지정
+3. 버튼 선택시 사진 라이브러리가 present 
+4. extension으로 관련 Deletage를 채용
+5. extension한 부분에 imagePickerController() 메소드 (사진 라이브러리에서 사진을 선택해 가지고 옴)
+
+![Screen Shot 2020-02-07 at 6.26.28 PM](/Users/keunnalee/Desktop/Screen Shot 2020-02-07 at 6.26.28 PM.png)
+
+![Screen Shot 2020-02-07 at 6.26.40 PM](/Users/keunnalee/Desktop/Screen Shot 2020-02-07 at 6.26.40 PM.png)
+
+![Screen Shot 2020-02-07 at 6.26.49 PM](/Users/keunnalee/Desktop/Screen Shot 2020-02-07 at 6.26.49 PM.png)
+
+### 배운 것
+
+1. info는 Dictionary로 이뤄져 있고 type, url, originalImage를 키로 갖는 3쌍으로 이뤄져 있다. 그래서 갤러리에서 사진을 가져올 때,Info Dictionary에서  UIImagePickerControllerOriginalImage를 키로 가지는 값을 가지고 오면 UIImage를 얻을 수 있다.
+2. 사진 라이브러리에서 이미지를 선택해서 가지고 오는 메소드를 구현해도 이미지를 선택하는 화면을 dismiss 하지 않으면 이전 화면으로 돌아가지 않는다.
+
+### 실패한 것과 결론
+
+**[ 실패 하나 😢]** 
+![](https://i.imgur.com/7pnSFMb.png)
+
+viewDidLoad에서 코드를 추가하면 
+```swift
+imagePickerController.delegate = self
+````
+`Cannot assign value of type 'SecondViewController' to type '(UIImagePickerControllerDelegate & UINavigationControllerDelegate)?'` 이라는 메세지의 에러가 발생한다.
+**[ 결론 👩‍💻 ]**
+ViewController의 extension 생성해주지 않아서 에러가 난 것이었다. 따라서 UIImagePickerControllerDelegate, UINavigationControllerDelegate를 상속받은 extention을 생성해준다.
+
+**[ 실패 둘 😢]** 
+사진 라이브러리에서 사진을 선택한 후 이전 화면으로 돌아가지 않았다.
+
+**[ 결론 👩‍💻 ]**
+```swift
+dismiss(animated: true, completion: nil)
+```
+사진을 선택하는 화면을 dismiss하는 코드를 추가한다.
+
+### 궁금했던 점
+
+🧐❓:UIImagePickerControllerDelegate를 채택 할 때 UINavigationControllerDelegate도 채택해야하는 이유는? 
+
+UIImagePickerControllerDelegate의 delegate 속성은 UIImagePickerControllerDelegate와 UINavigationControllerDelegate 프로토콜을 모두 구현하는 객체로 정의되어있다. 
+
+```swift
+ override func viewDidLoad() {
+        super.viewDidLoad()
+     imagePickerController.delegate = self
+}
+```
+여기서 self를 UIImagePickerController.delegate에 할당하려면 self는 UINavigationControllerDelegate 타입이어야 한다. 
+
+지금, imagePickerController의 델리게이트를 UINavigationControllerDelegate에 위임해준 것인데, 대리자는 사용자가 이미지나 동영상을 선택하거나 imagePickerController 화면을 종료할 때, 알림을 받는다. 
+출처: https://zeddios.tistory.com/125 [ZeddiOS]
